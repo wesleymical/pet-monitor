@@ -3,6 +3,7 @@ import json
 from datetime import datetime
 import os
 import subprocess
+import random
 
 app = FastAPI()
 
@@ -40,3 +41,13 @@ def simulate_data(qtd: int = 1):
         with open(DATA_PATH, "a") as f:
             f.write(json.dumps(data) + "\n")
     return {"status": "ok", "total": qtd}
+
+@app.get("/dados")
+def get_dados():
+    try:
+        with open(DATA_PATH, "r") as f:
+            linhas = f.readlines()
+            dados = [json.loads(linha) for linha in linhas if linha.strip()]
+        return {"dados": dados}
+    except Exception as e:
+        return {"erro": str(e), "dados": []}
