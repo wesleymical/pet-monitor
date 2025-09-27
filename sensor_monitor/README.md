@@ -35,14 +35,15 @@ sensor_monitor/
     └───pages
         │   1_Monitor.py      # Página de controle do monitor
         │   2_Simulator.py    # Página do simulador de dados
-        │   3_Dashboard.py    # Página de visualização dos dados
+        │   3_Dashboard.py    # Página de análise dos dados
+        │   4_Data.py         # Página de visualização dos dados brutos
 ```
 
 ---
 
 ## Tecnologias Utilizadas
 
-- **FastAPI**Backend para APIs REST, recebimento e simulação de dados dos sensores.
+- **FastAPI**Backend para APIs REST, recebimento, simulação e consulta de dados dos sensores.
 - **Streamlit**Frontend web interativo, com navegação multipáginas para controle, simulação e visualização.
 - **Docker & Docker Compose**
   Orquestração dos serviços em containers para fácil implantação e portabilidade.
@@ -80,18 +81,19 @@ sensor_monitor/
 - **Página Inicial:**Orientação para navegação pelo menu lateral.
 - **Monitor:**Botões para iniciar e parar o monitor via API.
 - **Simulador:**Botão para gerar dados simulados, com campo para quantidade.
-- **Dashboard:**
-  Visualização dos dados recebidos dos sensores.
+- **Dashboard:**Relatório analítico dos dados dos sensores.
+- **Data:**
+  Visualização dos dados brutos recebidos dos sensores.
 
 ---
 
 ## APIs Principais (FastAPI)
 
-- `POST /sensor`Recebe dados do sensor.
-- `POST /monitor/start`Inicia o monitor.
-- `POST /monitor/stop`Para o monitor.
-- `POST /simulator?qtd=N`Gera N dados simulados.
-- `GET /dados`Retorna todos os dados recebidos.
+- `POST /sensor`Recebe dados do sensor (JSON), adiciona timestamp e salva em `data/dados.json`.
+- `POST /monitor/start`Inicia o monitor (retorna status, pode ser adaptado para iniciar processos reais).
+- `POST /monitor/stop`Para o monitor (retorna status, pode ser adaptado para parar processos reais).
+- `POST /simulator?qtd=N`Simula o envio de N dados de sensores, gerando valores aleatórios e salvando em `data/dados.json`.
+- `GET /dados`Retorna todos os dados salvos em `data/dados.json` em formato JSON.
 - **Swagger:**
   Documentação automática disponível em `/docs`.
 
