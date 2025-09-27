@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Depois copie o restante do código
 COPY . .
 
-CMD ["streamlit", "run", "dashboard.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "home.py", "--server.port=8501", "--server.address=0.0.0.0"]
