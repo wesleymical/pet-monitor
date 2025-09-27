@@ -14,3 +14,11 @@ services:
       - ./data:/app/data
     depends_on:
       - backend
+
+  control_panel:
+    build: ./frontend
+    command: streamlit run control_panel.py --server.port=8502 --server.address=0.0.0.0
+    ports:
+      - "8502:8502"
+    depends_on:
+      - backend
