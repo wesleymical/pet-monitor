@@ -1,4 +1,3 @@
-
 # Sensor Monitor
 
 ## Visão Geral
@@ -82,8 +81,7 @@ sensor_monitor/
 - **Monitor:**Botões para iniciar e parar o monitor via API.
 - **Simulador:**Botão para gerar dados simulados, com campo para quantidade.
 - **Dashboard:**Relatório analítico dos dados dos sensores.
-- **Data:**
-  Visualização dos dados brutos recebidos dos sensores.
+- **Data:**Visualização dos dados brutos recebidos dos sensores.
 
 ---
 
