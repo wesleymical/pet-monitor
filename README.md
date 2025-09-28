@@ -77,11 +77,11 @@ sensor_monitor/
 
 ## Funcionalidades
 
-- **Página Inicial:**Orientação para navegação pelo menu lateral.
-- **Monitor:**Botões para iniciar e parar o monitor via API.
-- **Simulador:**Botão para gerar dados simulados, com campo para quantidade.
-- **Dashboard:**Relatório analítico dos dados dos sensores.
-- **Data:**Visualização dos dados brutos recebidos dos sensores.
+- Página Inicial: Orientação para navegação pelo menu lateral.
+- Monitor: Botões para iniciar e parar o monitor via API.
+- Simulador: Botão para gerar dados simulados, com campo para quantidade.
+- Dashboard: Relatório analítico dos dados dos sensores.
+- Data: Visualização dos dados brutos recebidos dos sensores.
 
 ---
 
