@@ -42,8 +42,8 @@ sensor_monitor/
 
 ## Tecnologias Utilizadas
 
-- **FastAPI**Backend para APIs REST, recebimento, simulação e consulta de dados dos sensores.
-- **Streamlit**Frontend web interativo, com navegação multipáginas para controle, simulação e visualização.
+- **FastAPI	**Backend para APIs REST, recebimento, simulação e consulta de dados dos sensores.
+- **Streamlit	**Frontend web interativo, com navegação multipáginas para controle, simulação e visualização.
 - **Docker & Docker Compose**
   Orquestração dos serviços em containers para fácil implantação e portabilidade.
 
